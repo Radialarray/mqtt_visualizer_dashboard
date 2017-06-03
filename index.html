@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script src="mosca_server.js" charset="utf-8"></script>
+    <script src="MongoDB_read.js" charset="utf-8"></script>
+    <!-- Stylesheets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css">
+
+  </head>
+  <body>
+      <!-- Wrapper -->
+        <div>
+
+    <div>
+      <div>
+        <h3>Input</h3>
+        <input type="text" id="serverName" name="server"></input>
+        <button type="submit" id="sendName" onclick="input();">OK</button>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h3>Input</h3>
+        <input type="text" id="messages" name="messages"></input>
+        <button type="submit" id="sendMessage" onclick="inputMessage();">Send</button>
+      </div>
+    </div>
+  </div>
+
+<div id="graph">
+  <div id="lines" class="responsive"></div>
+</div>
+
+
+<!-- Scripts -->
+  <script src="./graph.js"></script>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>

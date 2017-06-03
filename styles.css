@@ -1,0 +1,110 @@
+.responsive {
+  background: white;
+  width: 100%;
+margin: 0 auto;
+height: 1000px;
+}
+
+
+.line {
+  fill: none;
+  stroke: #ffbf00;
+  stroke-width: 2px;
+  display: block;
+margin: auto;
+z-index: 1000;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.x.axis line {
+  stroke: #fff;
+}
+
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.y.axis line,
+.y.axis path {
+  fill: none;
+  stroke: #000;
+}
+
+
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.center {
+  margin: 2%;
+}
+
+.gold, .gold small {
+  background-color: gold;
+  color: #403600;
+}
+
+.silver, .silver small {
+  background-color: silver;
+  color: #404040;
+}
+
+.oil, .oil small {
+  background-color: black;
+  color: #E5E5E5;
+}
+
+html, body, .container-fluid {
+  height: 100%;
+}
+
+.row {
+  height: 33.33333333%;
+}
+
+.row > div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.price {
+  padding-right: 5px;
+}
+
+/* Add a ( before the change */
+.change::before {
+  content: '(';
+}
+
+/* Add a ) after the change */
+.change::after {
+  content: ')';
+}
+
+/* Add a $ before the price */
+.price::before {
+  content: '$';
+}
+
+/* Hide the price and change when they are empty */
+.change:empty, .price:empty {
+  display: none;
+}
