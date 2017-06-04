@@ -1,8 +1,11 @@
+.test {
+  margin-top: 150px;
+}
+
 .responsive {
   background: white;
   width: 100%;
 margin: 0 auto;
-height: 1000px;
 }
 
 

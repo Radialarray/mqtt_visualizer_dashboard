@@ -1,48 +1,148 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Dashboard</title>
 
-    <!-- Stylesheets -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css">
-    <script src="mosca_server.js" charset="utf-8"></script>
-    <script src="MongoDB_read.js" charset="utf-8"></script>
-    <script src="./node_modules/materialize-css/dist/js/materialize.min.js" charset="utf-8"></script>
-  </head>
-  <body>
-      <!-- Wrapper -->
-        <div>
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
 
-    <div>
-      <div>
-        <h3>Input</h3>
-        <input type="text" id="serverName" name="server"></input>
-        <button type="submit" id="sendName" onclick="input();">OK</button>
+  <!-- Stylesheets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./node_modules/materialize-css/bin/materialize.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+  <script src="./node_modules/hammerjs/hammer.min.js"></script>
+  <script src="./node_modules/materialize-css/bin/materialize.js" charset="utf-8"></script>
+  <script src="mosca_server.js" charset="utf-8"></script>
+  <script src="MongoDB_read.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+  <!-- Navbar goes here -->
+  <ul id="slide-out" class="side-nav red darken-1">
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li></li>
+    <li></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+  <!-- Navbar goes here -->
+  <div class="container">
+
+    <div class="test">
+    <!-- Page Layout here -->
+    <div class="row">
+          <div class="col s12 m4">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" type="tel" class="validate">
+            <label for="icon_telephone">Telephone</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="row">
+      <div class="col s12 m3">
+        <div class="card">
+          <div class="card-image">
+            <img class="responsive-img" src="images/gray.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3">
+        <div class="card">
+          <div class="card-image">
+            <img class="responsive-img" src="images/gray.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div>
-      <div>
-        <h3>Input</h3>
-        <input type="text" id="messages" name="messages"></input>
-        <button type="submit" id="sendMessage" onclick="inputMessage();">Send</button>
-      </div>
-    </div>
+
   </div>
-
-<div id="graph">
-  <div id="lines" class="responsive"></div>
 </div>
 
 
-<!-- Scripts -->
-  <script src="./graph.js"></script>
-  </body>
+  <!-- Scripts -->
+</body>
+<script>
+  // Initialize collapse button
+  $(".button-collapse").sideNav();
+</script>
+<script src="./graph.js"></script>
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+<script>
+  // You can also require other files to run in this process
+  require('./renderer.js')
+</script>
+
 </html>

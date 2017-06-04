@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+
+  <!-- Stylesheets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./node_modules/materialize-css/bin/materialize.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+  <script src="./node_modules/hammerjs/hammer.min.js"></script>
+  <script src="./node_modules/materialize-css/bin/materialize.js" charset="utf-8"></script>
+  <script src="mosca_server.js" charset="utf-8"></script>
+  <script src="MongoDB_read.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+    <!-- Navbar goes here -->
+    <ul id="slide-out" class="side-nav red darken-1">
+      <li>
+        <div class="userView">
+          <div class="background">
+            <img src="">
+          </div>
+          <a href="#!user"><img class="circle" src=""></a>
+          <a href="#!name"><span class="white-text name">John Doe</span></a>
+          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div>
+      </li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+    <!-- Navbar goes here -->
+    <div class="container">
+
+    <!-- Page Layout here -->
+<div class="row">
+  <div class="col s12 m3 red">
+<h3>Test</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+</div>
+  <div class="col s12 m3 red">
+<h3>Test</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+  </div>
+  <div class="col s12 m3 red">
+<h3>Test</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+  </div>
+  <div class="col s12 m3 red">
+<h3>Test</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+</div>
+</div>
+
+<div  class="row green">
+  <div class="col s12 m6">
+    <h3>Input</h3>
+    <input type="text" id="serverName" name="server"></input>
+    <button type="submit" id="sendName" onclick="input();">OK</button>
+  </div>
+  <div class="col s12 m6">
+    <h3>Input</h3>
+    <input type="text" id="messages" name="messages"></input>
+    <button type="submit" id="sendMessage" onclick="inputMessage();">Send</button>
+  </div>
+</div>
+
+<div class="row yellow">
+       <div class="col s12 m4">
+         <div class="card">
+           <div class="card-image">
+             <img src="images/gray.jpg">
+             <span class="card-title">Card Title</span>
+           </div>
+           <div class="card-content">
+             <p>I am a very simple card. I am good at containing small bits of information.
+             I am convenient because I require little markup to use effectively.</p>
+           </div>
+           <div class="card-action">
+             <a href="#">This is a link</a>
+           </div>
+         </div>
+       </div>
+       <div class="col s12 m4">
+         <div class="card">
+           <div class="card-image">
+             <img src="images/gray.jpg">
+             <span class="card-title">Card Title</span>
+           </div>
+           <div class="card-content">
+             <p>I am a very simple card. I am good at containing small bits of information.
+             I am convenient because I require little markup to use effectively.</p>
+           </div>
+           <div class="card-action">
+             <a href="#">This is a link</a>
+           </div>
+         </div>
+       </div>
+       <div class="col s12 m4">
+         <div class="card">
+           <div class="card-image">
+             <img src="images/gray.jpg">
+             <span class="card-title">Card Title</span>
+           </div>
+           <div class="card-content">
+             <p>I am a very simple card. I am good at containing small bits of information.
+             I am convenient because I require little markup to use effectively.</p>
+           </div>
+           <div class="card-action">
+             <a href="#">This is a link</a>
+           </div>
+         </div>
+       </div>
+     </div>
+
+<div class="row">
+  <div id="graph">
+    <div id="lines" class="responsive"></div>
+  </div>
+</div>
+
+
+</div>
+
+
+  <!-- Scripts -->
+</body>
+<script>
+  // Initialize collapse button
+  $(".button-collapse").sideNav();
+</script>
+<script src="./graph.js"></script>
+
+<script>
+  // You can also require other files to run in this process
+  require('./renderer.js')
+</script>
+
+</html>
