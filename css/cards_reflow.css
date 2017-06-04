@@ -1,0 +1,73 @@
+.cards-container {
+  column-break-inside: avoid;
+}
+.cards-container .card {
+  display: inline-block;
+  overflow: visible;
+}
+
+@media only screen and (max-width: 600px) {
+  .cards-container {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .cards-container {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .cards-container {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+.text-center {
+  text-align: center;
+}
+
+
+.card.xsmall {
+  position: relative;
+}
+
+.card.xsmall {
+  max-height: 60%;
+  overflow: hidden;
+}
+
+.card.xsmall .card-image + .card-content {
+  max-height: 40%;
+}
+
+.card.xsmall .card-content {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.card.xsmall .card-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.card.xheight {
+  height: 300px;
+}
+
+.card.xxheight {
+  height: 200px;
+}
+.card.xxxheight {
+  height: 85px;
+}
+
+.reflow {
+  margin-bottom: 0;
+}
