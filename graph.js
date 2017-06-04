@@ -16,10 +16,17 @@ var margin, width, barHeight, percent,x,y;
   //     y = d3.scaleLinear().domain([0, d3.max(d3Data)]).range([height,0]);
 
 
-  var viewportWidth = $(window).width();
-var viewportHeight = $(window).height()/2;
- width = viewportWidth * .97;
-  height = width/1.85;
+//   var viewportWidth = $(window).width();
+// var viewportHeight = $(window).height()/2;
+//  width = viewportWidth * .97;
+//   height = width/1.85;
+width = parseInt(d3.select('#lines').style('width'));
+// width = $(window).width() * .97;
+var yheight = parseInt(d3.select('.card-content').style('width'))-50;
+var aspRatio = width/yheight;
+
+height = yheight/aspRatio;
+
 x = d3.scaleLinear().domain([0, d3Data.length]).range([0, width]),
     y = d3.scaleLinear().domain([0, d3.max(d3Data)]).range([height,0]);
 
@@ -86,9 +93,16 @@ x = d3.scaleLinear().domain([0, d3Data.length]).range([0, width]),
 
  function resize() {
 
-     width = parseInt(d3.select('#lines').style('width'));
-     width = $(window).width() * .97;
-     height = width/1.85;
+    //  width = parseInt(d3.select('#lines').style('width'));
+    //  width = $(window).width() * .97;
+    //  height = width/1.85;
+
+    width = parseInt(d3.select('#lines').style('width'));
+    // width = $(window).width() * .97;
+    var yheight = parseInt(d3.select('.card-content').style('width'))-50;
+    var aspRatio = width/yheight;
+    console.log(aspRatio);
+    height = (width/aspRatio)/2;
 
     // projection
     //  	.scale([width/3.5])
