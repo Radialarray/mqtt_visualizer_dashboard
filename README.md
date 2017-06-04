@@ -30,7 +30,7 @@ for changing html, css
 npm test
 ```
 
-### Run project
+### Run project with server
 ```
 npm start
 ```
@@ -53,14 +53,14 @@ pkill mongo
 ```
 
 ### Knowledge Base
-Start MongoDB Server in Folder:
+Start MongoDB Server in other folder:
 ```
 mongod --dbpath=/databasefolder --port 27017
 ```
 
 To create a capped Collection
 ```
-db.createCollection(„test“,{capped:true,size:10000,max:1000})
+db.createCollection(„collectionname“,{capped:true,size:10000,max:1000})
 ```
 
 Get fast to folder
