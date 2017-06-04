@@ -23,6 +23,13 @@ npm install
 ```
 ### Don't forget to set the right ip in your code for huzzah/other devices which will connect to mqtt server!!
 
+### Run test without running server
+runs project without starting the server daemon.
+for changing html, css
+```
+npm test
+```
+
 ### Run project
 ```
 npm start
