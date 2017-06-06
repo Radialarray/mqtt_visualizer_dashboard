@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+
+  <!-- Stylesheets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./node_modules/materialize-css/bin/materialize.css">
+  <link rel="stylesheet" href="./node_modules/material-design-icons/iconfont/material-icons.css" charset="utf-8">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+  <script src="./node_modules/hammerjs/hammer.min.js"></script>
+  <script src="./node_modules/materialize-css/bin/materialize.js" charset="utf-8"></script>
+  <script src="mosca_server.js" charset="utf-8"></script>
+  <script src="MongoDB_read.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar goes here -->
+    <ul id="slide-out" class="side-nav red darken-1">
+      <li>
+        <div class="userView">
+          <div class="background">
+            <img src="">
+          </div>
+          <a href="#!user"><img class="circle" src=""></a>
+          <a href="#!name"><span class="white-text name">John Doe</span></a>
+          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div>
+      </li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse "><i class="material-icons">menu</i></a>
+    <!-- Navbar goes here -->
+
+
+
+
+    <!-- Page Layout here -->
+
+<div class="row">
+
+  <div class="col l7">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+      <span class="card-title">Karte</span>
+        <div class="card-image blue lighten-4">
+          <img height="600"   >
+           </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col l5">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+      <span class="card-title">Komunication Boote</span>
+        <div class="card-image blue lighten-4">
+          <img height="600"   >
+           </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <div class="row">
+
+            <div class="col l2">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <div class="card-image">
+                    <img height="300"   src="images/boot.jpg">
+
+                     </div>
+                    <br>
+                  <span class="card-title">Boot</span>
+
+                   <br>
+                  <button class="btn waves-effect waves-light" type="submit" name="action">zurück zur Insel
+                   <i class="material-icons right">send</i>
+                 </button>
+                 <br></br>
+                 <button class="btn waves-effect waves-light" type="submit" name="action">Gib Feedback
+                  <i class="material-icons right">send</i>
+                </button>
+                </div>
+
+              </div>
+            </div>
+
+             <div class="col l2">
+               <div class="card blue-grey darken-1">
+                 <div class="card-content white-text">
+                   <div class="card-image">
+                     <img height="300"   src="images/boot.jpg">
+
+                      </div>
+                     <br>
+                   <span class="card-title">Boot</span>
+
+                    <br>
+                   <button class="btn waves-effect waves-light" type="submit" name="action">zurück zur Insel
+                    <i class="material-icons right">send</i>
+                  </button>
+                  <br></br>
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Gib Feedback
+                   <i class="material-icons right">send</i>
+                 </button>
+                 </div>
+
+               </div>
+             </div>
+             <div class="col l2">
+               <div class="card blue-grey darken-1">
+                 <div class="card-content white-text">
+                   <span class="white-text card-title left-align">Boot</span>
+                   <div class="card-image">
+
+                     <img height="300"   src="images/boot.jpg">
+
+                      </div>
+                     <br>
+
+
+                    <br>
+                   <button class="btn waves-effect waves-light" type="submit" name="action">zurück zur Insel
+                    <i class="material-icons right">send</i>
+                  </button>
+                  <br></br>
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Gib Feedback
+                   <i class="material-icons right">send</i>
+                 </button>
+                 </div>
+
+               </div>
+             </div>
+
+             <div class="col l6">
+               <div class="card blue-grey darken-1">
+                 <div class="card-content white-text">
+                   <div class="card-image">
+                     <img height="300" >
+
+                   </div>
+
+                   <span class="card-title">Card Title</span>
+                   <p>I am a very simple card. I am good at containing small bits of information.
+                   I am convenient because I require little markup to use effectively.</p>
+                 </div>
+
+               </div>
+             </div>
+
+  </div>
+
+
+  <div class="l12">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <div class="card-image">
+          <img height="90" >
+
+        </div>
+
+        <span class="card-title">Card Title</span>
+        <p>I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+<div class="row">
+  <div id="graph">
+    <div id="lines" class="responsive"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <!-- Scripts -->
+</body>
+<script>
+  // Initialize collapse button
+  $(document).ready(function() {
+  $('select').material_select();
+});
+  $(".button-collapse").sideNav();
+</script>
+<script src="./graph.js"></script>
+
+<script>
+  // You can also require other files to run in this process
+  require('./renderer.js')
+</script>
+
+</html>
