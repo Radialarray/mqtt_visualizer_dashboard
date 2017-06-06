@@ -17,11 +17,14 @@ MongoClient.connect(url, function(err, db) {
   console.log("Connected correctly to server");
 if(drawn == false) {
     initalizeGraph(db, function() {
+      initPiechart(d3Data);
+
         db.close();
     });
     drawn = true;
 } else {
   updateGraph(db, function() {
+    updatePiechart(d3Data);
     db.close();
   });
 }
@@ -96,6 +99,7 @@ for(var i = d3Data.length - 1; i >= 0; i--) {
     // console.log(d3Data);
 }
 }
+
  callback();
 }
 

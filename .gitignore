@@ -2,3 +2,10 @@
 node_modules
 .DS_Store
 package-lock.json
+
+
+# exclude everything
+database/*
+
+# exception to the rule
+!databse/.gitkeep 

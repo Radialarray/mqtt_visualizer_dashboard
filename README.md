@@ -23,7 +23,14 @@ npm install
 ```
 ### Don't forget to set the right ip in your code for huzzah/other devices which will connect to mqtt server!!
 
-### Run project
+### Run test without running server
+runs project without starting the server daemon.
+for changing html, css
+```
+npm test
+```
+
+### Run project with server
 ```
 npm start
 ```
@@ -46,14 +53,14 @@ pkill mongo
 ```
 
 ### Knowledge Base
-Start MongoDB Server in Folder:
+Start MongoDB Server in other folder:
 ```
 mongod --dbpath=/databasefolder --port 27017
 ```
 
 To create a capped Collection
 ```
-db.createCollection(„test“,{capped:true,size:10000,max:1000})
+db.createCollection(„collectionname“,{capped:true,size:10000,max:1000})
 ```
 
 Get fast to folder
