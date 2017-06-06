@@ -19,6 +19,7 @@ function createWindow () {
        minWidth: 50,
        minHeight: 20,
        show: false,
+  
        icon: path.join(__dirname, 'assets/icons/png/64x64.png')
    })
 

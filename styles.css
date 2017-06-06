@@ -15,7 +15,7 @@
 .intro h5
 {
 	text-transform: uppercase;
-	background-color: #f5f5f5;
+	background-color: #f8f5f5;
 	padding: 10px;
 	color: #333333;
 	display: inline-block;
@@ -196,4 +196,26 @@ path {
 	-moz-border-radius: 505px;
 	border-radius: 50px;
 	background: red;
+}
+
+cube {
+    width: 900px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation: mymove 3s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation: mymove 3s;
+    animation-fill-mode: forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+}
+
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
 }
