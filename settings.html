@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+
+  <!-- Stylesheets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./node_modules/materialize-css/bin/materialize.css">
+  <link rel="stylesheet" href="./node_modules/material-design-icons/iconfont/material-icons.css" charset="utf-8">
+  <link rel="stylesheet" href="css/cards_reflow.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./node_modules/hammerjs/hammer.min.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+  <script src="./node_modules/materialize-css/bin/materialize.js" charset="utf-8"></script>
+  <script src="settings.js" charset="utf-8"></script>
+  <style>
+  body {
+opacity: 1;
+background-color: rgba(255, 255, 255, 1);
+   -webkit-transition: all 0.5s ease; /* Safari */
+   transition: all 0.5s ease;
+  }
+
+  .onClose{
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0)
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+  <div class="row v-height">
+    <div class="valign-wrapper v-height">
+
+    <div class="input-field col s12 m6 offset-m3">
+      <select id="selectWebcam">
+        <option value="" disabled selected>Choose your option</option>
+        <!-- <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option> -->
+      </select>
+      <label>Select webcam</label>
+    </div>
+
+    <a class="waves-effect waves-light btn" id="submitSettings" onclick="closeSettings()">READY!</a>
+
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+</body>
+
+</html>

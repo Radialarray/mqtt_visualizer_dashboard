@@ -1,8 +1,8 @@
 const electron = require('electron')
-// Module to control application life.
-const app = electron.app
+var {app, BrowserWindow, ipcMain} = electron; // Module to control application life.
+// const app = electron.app
 // Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
+// const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
@@ -10,22 +10,39 @@ const url = require('url')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+let settings
+var optionSel;
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-       width: 2560,
-       height: 1440,
-       minWidth: 50,
-       minHeight: 20,
-       show: false,
-  
-       icon: path.join(__dirname, 'assets/icons/png/64x64.png')
-   })
+    width: 2560,
+    height: 1440,
+    minWidth: 50,
+    minHeight: 20,
+    show: false,
 
-   mainWindow.once('ready-to-show', () => {
+    icon: path.join(__dirname, 'assets/icons/png/64x64.png')
+  })
+
+  settings = new BrowserWindow({
+    parent: mainWindow,
+    frame: false,
+    show: false,
+    transparent: true,
+  })
+
+  settings.loadURL(url.format({
+    pathname: path.join(__dirname, 'settings.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+
+  mainWindow.once('ready-to-show', () => {
+    settings.show()
     mainWindow.show()
-})
+
+  })
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'dashboard_trial.html'),
@@ -37,14 +54,12 @@ function createWindow () {
   // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
-  mainWindow.on('closed', function () {
+  mainWindow.on('closed', function() {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
   })
-
-
 }
 
 // This method will be called when Electron has finished
@@ -53,7 +68,7 @@ function createWindow () {
 app.on('ready', createWindow)
 
 // Quit when all windows are closed.
-app.on('window-all-closed', function () {
+app.on('window-all-closed', function() {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
@@ -61,7 +76,7 @@ app.on('window-all-closed', function () {
   }
 })
 
-app.on('activate', function () {
+app.on('activate', function() {
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
   if (mainWindow === null) {
@@ -69,5 +84,11 @@ app.on('activate', function () {
   }
 })
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
+
+
+ipcMain.on('asynchronous-message', (event, arg) => {
+  console.log(arg)  // prints "ping"
+  event.sender.send('asynchronous-reply', arg)
+  mainWindow.webContents.send('asynchronous-reply', arg);
+
+})
